@@ -170,10 +170,7 @@ export function printChunkModulesTable(
   ].sort((a, b) => b.diffPercentage - a.diffPercentage)
 
   if (changedModules.length === 0) {
-    return `
-Changeset
-
-No files were changed`
+    return ``
   }
 
   return `
