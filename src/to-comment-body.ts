@@ -18,7 +18,6 @@ export function getCommentBody(
 # Bundle Stats${title ? ` - ${title}` : ''}
 
 ${printTotalAssetTable(statsDiff)}
-${chunkModuleDiff ? `${printChunkModulesTable(chunkModuleDiff)}\n` : ''}
 
 ${getIdentifierComment(title)}
 `
