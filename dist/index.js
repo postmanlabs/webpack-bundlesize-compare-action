@@ -557,7 +557,6 @@ function getCommentBody(statsDiff, chunkModuleDiff, title) {
 # Bundle Stats${title ? ` - ${title}` : ''}
 
 ${(0, print_markdown_1.printTotalAssetTable)(statsDiff)}
-${chunkModuleDiff ? `${(0, print_markdown_1.printChunkModulesTable)(chunkModuleDiff)}\n` : ''}
 
 ${getIdentifierComment(title)}
 `;
