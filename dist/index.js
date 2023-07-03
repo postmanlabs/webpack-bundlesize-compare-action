@@ -559,21 +559,9 @@ function getCommentBody(statsDiff, chunkModuleDiff, title) {
     return `
 # Bundle Stats${title ? ` - ${title}` : ''}
 
-Hey there, this message comes from a [GitHub action](https://github.com/github/webpack-bundlesize-compare-action) that helps you and reviewers to understand how these changes affect the size of this project's bundle.
-
-As this PR is updated, I'll keep you updated on how the bundle size is impacted.
 
 ${(0, print_markdown_1.printTotalAssetTable)(statsDiff)}
 ${chunkModuleDiff ? `${(0, print_markdown_1.printChunkModulesTable)(chunkModuleDiff)}\n` : ''}
-<details>
-<summary>View detailed bundle breakdown</summary>
-
-<div>
-
-${(0, print_markdown_1.printAssetTablesByGroup)(statsDiff)}
-
-</div>
-</details>
 
 ${getIdentifierComment(title)}
 `;
